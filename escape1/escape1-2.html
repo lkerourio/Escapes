@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Escape 1 page 2</title>
     <style>
         form {
@@ -14,10 +14,6 @@
             border: 2px solid #CCC;
             border-radius: 1em;
             border-color: darkorange
-        }
-
-        .spacer {
-            height: 200pt;
         }
 
         form div+div {
@@ -48,19 +44,18 @@ Par défaut, les textareas ont une police monospace */
             border: 1px solid #999;
             border-color: darkorange
         }
-
-        input:focus,
-        textarea:focus {
-            /* Pour souligner légèrement les éléments actifs */
-            border-color: #000;
-        }
-
+        
         textarea {
             /* Pour aligner les champs texte multi ligne avec leur étiquette */
             vertical-align: top;
 
             /* Pour donner assez de place pour écrire du texte */
             height: 5em;
+        }
+
+        input:focus {
+            /* Pour souligner légèrement les éléments actifs */
+            border-color: #000;
         }
 
         .button {
