@@ -17,7 +17,7 @@
         }
 
         form div+div {
-            margin-top: 1em;
+            margin-top: 1vh;
         }
 
         label {
@@ -59,9 +59,9 @@ Par défaut, les textareas ont une police monospace */
         }
 
         button {
-            /* Cette marge supplémentaire représente grosso modo le même espace que celui
-entre les étiquettes et les champs texte */
-            margin-left: auto;
+            display:      block;
+            margin-left:  auto;
+            margin-right: 0;
             font: 2vw sans-serif;
         }
 
@@ -121,7 +121,7 @@ entre les étiquettes et les champs texte */
             <input id="arrivee" name="codearrivee" required pattern="15 11 08 03|15110803" placeholder="** ** ** **">
         </div>
 
-        <div class="button">
+        <div>
             <button type="submit">Mise à feu</button>
         </div>
 
