@@ -3,22 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Escape1 page 1</title>
+    <title>Escape1</title>
     <style>
-        html {
-            text-align: center
-        }
-
         form {
             /* Uniquement centrer le formulaire sur la page */
             margin: 0 auto;
             width: 400px;
             /* Encadré pour voir les limites du formulaire */
             padding: 1em;
+            border: 2px solid #CCC;
+            border-radius: 1em;
+            border-color: darkorange
         }
 
         .spacer {
-            height: 420pt;
+            height: 200pt;
         }
 
         form div+div {
@@ -29,12 +28,11 @@
             /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
             display: inline-block;
             width: 300px;
-            text-align: justify;
+            text-align: left;
             color: darkorange;
             font-weight: bold;
-            font-size: 130%;
+            font-size: 120%;
         }
-
 
         input,
         textarea {
@@ -67,7 +65,7 @@ Par défaut, les textareas ont une police monospace */
 
         .button {
             /* Pour placer le bouton à la même position que les champs texte */
-            ;
+            padding-left: 90px;
             /* même taille que les étiquettes */
         }
 
@@ -86,9 +84,6 @@ entre les étiquettes et les champs texte */
         }
 
         body {
-            background-image: url("imagemainmenu.jpeg");
-            background-repeat: no-repeat;
-            background-position: top;
             background-color: black;
         }
 
@@ -105,30 +100,42 @@ entre les étiquettes et les champs texte */
 
 <body>
 
+    <img src="imagescape1-2.jpg" ; class="centered" ; width="650" ;>
 
-    <form action="/escape1/escape1-1.html">
+    <form action="escape1-3.html">
+
+
+        <div>
+            <label for="verrouillage">Code de verrouillage des portes : </label>
+            <p></p>
+            <input id="verrouillage" name="codeverrouillage" required pattern="12" placeholder="**">
+
+
+        </div>
+
+        <div>
+            <label for="objectif">Objectif de mission :</label>
+            <p></p>
+            <input id="objectif" name="objectif" required pattern="recuperer agent deux sur terre|récupérer agent deux sur Terre|récupérer agent deux sur terre" placeholder="indiquer en toutes lettres">
+        </div>
+
+        <div>
+            <label for="depart"> Coordonnées de départ :</label>
+            <p></p>
+            <input id="depart" name="codedepart" required pattern="11 41 34 13|11413413" placeholder="** ** ** **">
+        </div>
+
+        <div>
+            <label for="arrivee"> Coordonnées de destination :</label>
+            <p></p>
+            <input id="arrivee" name="codearrivee" required pattern="15 11 08 03|15110803" placeholder="** ** ** **">
+        </div>
 
         <div class="button">
-            <button type="submit">Escape 1</button>
+            <button type="submit">Mise à feu</button>
         </div>
+
     </form>
-    <p></p>
-
-    <form action="/escape2/escape2-1.html">
-
-        <div class="button">
-            <button type="submit">Escape 2</button>
-        </div>
-    </form>
-
-    <p></p>
-    <form action="/escape3/escape3-1.html">
-
-        <div class="button">
-            <button type="submit">Escape 3</button>
-        </div>
-    </form>
-    <p></p>
 
 </body>
 
