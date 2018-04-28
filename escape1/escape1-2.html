@@ -15,9 +15,9 @@
             border-radius: 1vw;
             border-color: darkorange
         }
-
-        form div+div {
-            margin-top: 1vh;
+        
+        div {
+            margin-bottom: 4vh;
         }
 
         label {
@@ -28,6 +28,7 @@
             color: darkorange;
             font-weight: bold;
             font-size: 3vw;
+            margin-bottom: 1vh;
         }
 
         input,
@@ -43,14 +44,6 @@ Par défaut, les textareas ont une police monospace */
             /* Pour harmoniser le look & feel des bordures des champs texte */
             border: 1vw solid #999;
             border-color: darkorange
-        }
-        
-        textarea {
-            /* Pour aligner les champs texte multi ligne avec leur étiquette */
-            vertical-align: top;
-
-            /* Pour donner assez de place pour écrire du texte */
-            height: 5vh;
         }
 
         input:focus {
@@ -75,12 +68,13 @@ Par défaut, les textareas ont une police monospace */
 
         body {
             background-color: black;
+            background-image: url("imagescape1-2.jpg");
+            background-size: 100vw auto;
+            background-repeat: no-repeat;
         }
 
-        img.centered {
-            display: block;
-            margin-left: auto;
-            margin-right: auto
+        .spacer {
+            height: 90vw;
         }
 
     </style>
@@ -90,40 +84,34 @@ Par défaut, les textareas ont une police monospace */
 
 <body>
 
-    <img src="imagescape1-2.jpg" ; class="centered" ; width="300vw" ;>
+    <div class="spacer">
+    </div>
 
     <form action="escape1-3.html">
 
 
         <div>
             <label for="verrouillage">Code de verrouillage des portes : </label>
-            <p></p>
             <input id="verrouillage" name="codeverrouillage" required pattern="12" placeholder="**">
-
-
         </div>
 
         <div>
             <label for="objectif">Objectif de mission :</label>
-            <p></p>
             <input id="objectif" name="objectif" required pattern="recuperer agent deux sur terre|récupérer agent deux sur Terre|récupérer agent deux sur terre" placeholder="indiquer en toutes lettres">
         </div>
 
         <div>
             <label for="depart"> Coordonnées de départ :</label>
-            <p></p>
             <input id="depart" name="codedepart" required pattern="11 41 34 13|11413413" placeholder="** ** ** **">
         </div>
 
         <div>
             <label for="arrivee"> Coordonnées de destination :</label>
-            <p></p>
             <input id="arrivee" name="codearrivee" required pattern="15 11 08 03|15110803" placeholder="** ** ** **">
         </div>
 
-        <div>
-            <button type="submit">Mise à feu</button>
-        </div>
+        <button type="submit">Mise à feu</button>
+        
 
     </form>
 
