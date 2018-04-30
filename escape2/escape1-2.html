@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Escape 1 page 2</title>
+    <style>
+        form {
+            /* Uniquement centrer le formulaire sur la page */
+            margin: auto auto;
+            width: 60vw;
+            /* Encadré pour voir les limites du formulaire */
+            padding: 1vh;
+            border: 1vw solid #CCC;
+            border-radius: 1vw;
+            border-color: darkorange
+        }
+        
+        div {
+            margin-bottom: 2vh;
+        }
+
+        label {
+            /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+            display: inline-block;
+            width: 60vw;
+            text-align: left;
+            color: darkorange;
+            font-weight: bold;
+            font-size: 3vw;
+            margin-bottom: 1vh;
+        }
+
+        input,
+        textarea {
+            /* Pour s'assurer que tous les champs texte ont la même police.
+Par défaut, les textareas ont une police monospace */
+            font: 2vw sans-serif;
+
+            /* Pour que tous les champs texte aient la même dimension */
+            width: 60vw;
+            box-sizing: border-box;
+
+            /* Pour harmoniser le look & feel des bordures des champs texte */
+            border: 1vw solid #999;
+            border-color: darkorange
+        }
+
+        input:focus {
+            /* Pour souligner légèrement les éléments actifs */
+            border-color: #000;
+        }
+
+        button {
+            display:      block;
+            margin-left:  auto;
+            margin-right: 0;
+            font: 2vw sans-serif;
+        }
+
+        input:invalid {
+            border: 1vw dashed red;
+        }
+
+        input:valid {
+            border: .5vw solid darkorange;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("imagescape1-2.jpg");
+            background-size: 100vw auto;
+            background-repeat: no-repeat;
+        }
+
+        .spacer {
+            height: 90vw;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="spacer">
+    </div>
+
+    <form action="escape1-3.html">
+
+
+        <div>
+            <label for="verrouillage">Code de verrouillage des portes : </label>
+            <input id="verrouillage" name="codeverrouillage" required pattern="12" placeholder="**">
+        </div>
+
+        <div>
+            <label for="objectif">Objectif de mission :</label>
+            <input id="objectif" name="objectif" required pattern="recuperer agent deux sur terre|récupérer agent deux sur Terre|récupérer agent deux sur terre" placeholder="indiquer en toutes lettres">
+        </div>
+
+        <div>
+            <label for="depart"> Coordonnées de départ :</label>
+            <input id="depart" name="codedepart" required pattern="11 41 34 13|11413413" placeholder="** ** ** **">
+        </div>
+
+        <div>
+            <label for="arrivee"> Coordonnées de destination :</label>
+            <input id="arrivee" name="codearrivee" required pattern="15 11 08 03|15110803" placeholder="** ** ** **">
+        </div>
+
+        <button type="submit">Mise à feu</button>
+        
+
+    </form>
+
+</body>
+
+</html>

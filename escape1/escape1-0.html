@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Comment the following line for local testing but unable for Gihub pages -->
-    <base href="/Escapes/">
-    <title>Accueil Escapes</title>
+    <title>Escape 1 page 0</title>
     <style>
         html {
             text-align: center
@@ -14,21 +12,34 @@
         form {
             /* Uniquement centrer le formulaire sur la page */
             margin: 0 auto;
-            width: 80vw;
+            width: 60vw;
             /* Encadré pour voir les limites du formulaire */
             padding: 1em;
+        }
+
+        .spacer {
+            height: 40vw;
         }
 
         form div+div {
             margin-top: 1em;
         }
 
+        label {
+            /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+            display: inline-block;
+            width: 60vw;
+            text-align: justify;
+            color: dodgerblue;
+            font-weight: bold;
+            font-size: 4vw;
+        }
+
         button {
             /* Cette marge supplémentaire représente grosso modo le même espace que celui
 entre les étiquettes et les champs texte */
             margin-left: .5em;
-            width: 50vw;
-            font: 5vw sans-serif;
+            font: 4vw sans-serif;
         }
 
         body {
@@ -46,30 +57,18 @@ entre les étiquettes et les champs texte */
 
 <body>
 
+    <div class="spacer">
+    </div>
 
-    <form action="escape1/escape1-1.html">
+    <label> Le but du jeu est de résoudre toutes les énigmes. <p></p> Dans cette escape, un même objet peut servir plusieurs fois. <p></p> Les objets ont tous une signification. <p></p> Il n'y a pas besoin de fouiller en hauteur. <p></p> </label>
 
-        <div class="button">
-            <button type="submit">Escape 1</button>
-        </div>
-    </form>
-    <p></p>
-
-    <form action="escape2/escape2-0.html">
+    <form action="escape1-1.html">
 
         <div class="button">
-            <button type="submit">Escape 2</button>
+            <button type="submit">J'ai compris les règles</button>
         </div>
-    </form>
 
-    <p></p>
-    <form action="escape3/escape3-0.html">
-
-        <div class="button">
-            <button type="submit">Escape 3</button>
-        </div>
     </form>
-    <p></p>
 
 </body>
 
