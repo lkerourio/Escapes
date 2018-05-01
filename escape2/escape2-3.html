@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Escape 1 page 2</title>
+    <title>Escape 2 page 3</title>
     <style>
         form {
             /* Uniquement centrer le formulaire sur la page */
@@ -13,7 +13,7 @@
             padding: 1vh;
             border: 1vw solid #CCC;
             border-radius: 1vw;
-            border-color: darkorange
+            border-color: blue
         }
         
         div {
@@ -68,7 +68,7 @@ Par défaut, les textareas ont une police monospace */
 
         body {
             background-color: black;
-            background-image: url("imagescape1-2.jpg");
+            background-image: url("imagescape2-3.jpg");
             background-size: 100vw auto;
             background-repeat: no-repeat;
         }
@@ -87,30 +87,25 @@ Par défaut, les textareas ont une police monospace */
     <div class="spacer">
     </div>
 
-    <form action="escape1-3.html">
+    <form action="escape2-4.html">
 
 
         <div>
-            <label for="verrouillage">Code de verrouillage des portes : </label>
+            <label for="verrouillage">Code d'ouverture de la porte du couloir : </label>
             <input id="verrouillage" name="codeverrouillage" required pattern="12" placeholder="**">
         </div>
 
         <div>
-            <label for="objectif">Objectif de mission :</label>
-            <input id="objectif" name="objectif" required pattern="recuperer agent deux sur terre|récupérer agent deux sur Terre|récupérer agent deux sur terre" placeholder="indiquer en toutes lettres">
-        </div>
-
-        <div>
-            <label for="depart"> Coordonnées de départ :</label>
+            <label for="depart"> Code d'ouverture de la porte extérieure :</label>
             <input id="depart" name="codedepart" required pattern="11 41 34 13|11413413" placeholder="** ** ** **">
         </div>
 
-        <div>
-            <label for="arrivee"> Coordonnées de destination :</label>
-            <input id="arrivee" name="codearrivee" required pattern="15 11 08 03|15110803" placeholder="** ** ** **">
+          <div>
+            <label for="objectif">Adresse de destination :</label>
+            <input id="objectif" name="objectif" required pattern="27 chemin des pins 56220 Peillac|27 ch des pins 56220 Peillac|27 chemin des pins 56220 peillac" placeholder="indiquer en toutes lettres sans caractère spéciaux">
         </div>
 
-        <button type="submit">Mise à feu</button>
+        <button type="submit">Sortir</button>
         
 
     </form>
