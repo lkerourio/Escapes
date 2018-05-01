@@ -4,6 +4,33 @@
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Escape 1 page 2</title>
+    <script>
+        // Set the date we're counting down to
+        var countDownTime = new Date().getTime() + 3600000;
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownTime - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown").innerHTML = minutes + " minutes " + seconds + " seconds";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "GAME OVER";
+            }
+        }, 1000);
+    </script>
     <style>
         form {
             /* Uniquement centrer le formulaire sur la page */
@@ -15,7 +42,7 @@
             border-radius: 1vw;
             border-color: darkorange
         }
-        
+
         div {
             margin-bottom: 2vh;
         }
@@ -52,8 +79,8 @@ Par défaut, les textareas ont une police monospace */
         }
 
         button {
-            display:      block;
-            margin-left:  auto;
+            display: block;
+            margin-left: auto;
             margin-right: 0;
             font: 2vw sans-serif;
         }
@@ -73,10 +100,23 @@ Par défaut, les textareas ont une police monospace */
             background-repeat: no-repeat;
         }
 
-        .spacer {
-            height: 90vw;
+        .spacer1 {
+            height: 21vw;
         }
 
+        .spacer2 {
+            height: 51vw;
+        }
+
+        .countdown {
+            display: inline-block;
+            width: 100vw;
+            text-align: center;
+            color: darkorange;
+            font-weight: bold;
+            font-size: 7vw;
+            margin-bottom: 0vh;
+        }
     </style>
 
 </head>
@@ -84,7 +124,14 @@ Par défaut, les textareas ont une police monospace */
 
 <body>
 
-    <div class="spacer">
+    <div class="spacer1">
+    </div>
+
+    <div>
+        <label class="countdown" id="countdown">60 minutes 0 secondes</label>
+    </div>
+
+    <div class="spacer2">
     </div>
 
     <form action="escape1-3.html">
@@ -97,7 +144,8 @@ Par défaut, les textareas ont une police monospace */
 
         <div>
             <label for="objectif">Objectif de mission :</label>
-            <input id="objectif" name="objectif" required pattern="recuperer agent deux sur terre|récupérer agent deux sur Terre|récupérer agent deux sur terre" placeholder="indiquer en toutes lettres">
+            <input id="objectif" name="objectif" required pattern="recuperer agent deux sur terre|récupérer agent deux sur Terre|récupérer agent deux sur terre"
+                placeholder="indiquer en toutes lettres">
         </div>
 
         <div>
@@ -111,7 +159,7 @@ Par défaut, les textareas ont une police monospace */
         </div>
 
         <button type="submit">Mise à feu</button>
-        
+
 
     </form>
 
