@@ -5,43 +5,111 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Escape 2 page 4</title>
     <style>
-        html {
-            text-align: center
+        form {
+            /* Uniquement centrer le formulaire sur la page */
+            margin: auto auto;
+            width: 60vw;
+            /* Encadré pour voir les limites du formulaire */
+            padding: 1vh;
+            border: 1vw solid #CCC;
+            border-radius: 1vw;
+            border-color: darkblue
         }
 
-        body {
-            background-image: url("imagescape2-4.jpg");
-            background-repeat: no-repeat;
-            background-position: top;
-            background-color: black;
-            background-size: auto 100vh;
+        div {
+            margin-bottom: 2vh;
         }
 
-            .spacer {
-            height: 40vw;
-        }
-        
-          label {
+        label {
             /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
             display: inline-block;
             width: 60vw;
-            text-align: justify;
+            text-align: left;
             color: blue;
             font-weight: bold;
-              font-size: 6vw;}
-        
-        
+            font-size: 3vw;
+            margin-bottom: 1vh;
+        }
+
+        input,
+        textarea {
+            /* Pour s'assurer que tous les champs texte ont la même police.
+Par défaut, les textareas ont une police monospace */
+            font: 2vw sans-serif;
+
+            /* Pour que tous les champs texte aient la même dimension */
+            width: 60vw;
+            box-sizing: border-box;
+
+            /* Pour harmoniser le look & feel des bordures des champs texte */
+            border: 1vw solid #999;
+            border-color: darkblue
+        }
+
+        input:focus {
+            /* Pour souligner légèrement les éléments actifs */
+            border-color: #000;
+        }
+
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+            font: 2vw sans-serif;
+        }
+
+        input:invalid {
+            border: 1vw dashed red;
+        }
+
+        input:valid {
+            border: .5vw solid darkblue;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("imagescape2-3.jpg");
+            background-size: 100vw auto;
+            background-repeat: no-repeat;
+        }
+
+        .spacer {
+            height: 50vw;
+        }
     </style>
 
 </head>
 
+
 <body>
-    
+
     <div class="spacer">
     </div>
-    
-   <label> Bravo, vous avez réussi. </label>
-    
+
+    <form action="escape2-5.html">
+
+
+        <div>
+            <label for="verrouillage">Code d'ouverture de la porte du couloir : </label>
+            <input id="verrouillage" name="codecouloir" required pattern="287" placeholder="***">
+        </div>
+
+        <div>
+            <label for="depart"> Code d'ouverture de la porte extérieure :</label>
+            <input id="depart" name="codeexterieur" required pattern="1307" placeholder="****">
+        </div>
+
+        <div>
+            <label for="objectif">Adresse de destination :</label>
+            <input id="objectif" name="objectif" required pattern="27 chemin des pins 56220 Peillac|27 ch des pins 56220 Peillac|27 chemin des pins 56220 peillac|27 ch des pins 56220 peillac|"
+                placeholder="indiquer en toutes lettres sans caractère spéciaux">
+        </div>
+
+        <button type="submit">Sortir</button>
+
+
+    </form>
+
 </body>
 
 </html>

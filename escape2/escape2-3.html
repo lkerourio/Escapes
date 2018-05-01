@@ -5,76 +5,49 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Escape 2 page 3</title>
     <style>
-        form {
-            /* Uniquement centrer le formulaire sur la page */
-            margin: auto auto;
-            width: 60vw;
-            /* Encadré pour voir les limites du formulaire */
-            padding: 1vh;
-            border: 1vw solid #CCC;
-            border-radius: 1vw;
-            border-color: blue
+        html {
+            text-align: center
         }
 
-        div {
-            margin-bottom: 2vh;
+        form {
+            /* Uniquement centrer le formulaire sur la page */
+            margin: 0 auto;
+            width: 60vw;
+            /* Encadré pour voir les limites du formulaire */
+            padding: 1em;
+        }
+
+        .spacer {
+            height: 40vw;
+        }
+
+        form div+div {
+            margin-top: 1em;
         }
 
         label {
             /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
             display: inline-block;
             width: 60vw;
-            text-align: left;
-            color: darkorange;
+            text-align: justify;
+            color: blue;
             font-weight: bold;
-            font-size: 3vw;
-            margin-bottom: 1vh;
-        }
-
-        input,
-        textarea {
-            /* Pour s'assurer que tous les champs texte ont la même police.
-Par défaut, les textareas ont une police monospace */
-            font: 2vw sans-serif;
-
-            /* Pour que tous les champs texte aient la même dimension */
-            width: 60vw;
-            box-sizing: border-box;
-
-            /* Pour harmoniser le look & feel des bordures des champs texte */
-            border: 1vw solid #999;
-            border-color: darkorange
-        }
-
-        input:focus {
-            /* Pour souligner légèrement les éléments actifs */
-            border-color: #000;
+            font-size: 4vw;
         }
 
         button {
-            display: block;
-            margin-left: auto;
-            margin-right: 0;
-            font: 2vw sans-serif;
-        }
-
-        input:invalid {
-            border: 1vw dashed red;
-        }
-
-        input:valid {
-            border: .5vw solid darkorange;
+            /* Cette marge supplémentaire représente grosso modo le même espace que celui
+entre les étiquettes et les champs texte */
+            margin-left: .5em;
+            font: 4vw sans-serif;
         }
 
         body {
-            background-color: black;
             background-image: url("imagescape2-3.jpg");
-            background-size: 100vw auto;
             background-repeat: no-repeat;
-        }
-
-        .spacer {
-            height: 90vw;
+            background-position: top;
+            background-color: black;
+            background-size: auto 100vh;
         }
     </style>
 
@@ -86,27 +59,18 @@ Par défaut, les textareas ont une police monospace */
     <div class="spacer">
     </div>
 
+    <label>
+        <p></p> Vous entrez dans le couloir vide. 
+        <p></p> Fouillez le petit bureau qui s'y trouve.
+        <p></p> Utilisez le code 456 sur le cadenas.
+        <p></p>
+    </label>
+
     <form action="escape2-4.html">
 
-
-        <div>
-            <label for="verrouillage">Code d'ouverture de la porte du couloir : </label>
-            <input id="verrouillage" name="codeverrouillage" required pattern="12" placeholder="**">
+        <div class="button">
+            <button type="submit">C'est fait</button>
         </div>
-
-        <div>
-            <label for="depart"> Code d'ouverture de la porte extérieure :</label>
-            <input id="depart" name="codedepart" required pattern="11 41 34 13|11413413" placeholder="** ** ** **">
-        </div>
-
-        <div>
-            <label for="objectif">Adresse de destination :</label>
-            <input id="objectif" name="objectif" required pattern="27 chemin des pins 56220 Peillac|27 ch des pins 56220 Peillac|27 chemin des pins 56220 peillac"
-                placeholder="indiquer en toutes lettres sans caractère spéciaux">
-        </div>
-
-        <button type="submit">Sortir</button>
-
 
     </form>
 
