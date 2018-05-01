@@ -2,265 +2,265 @@
 <html>
 
 <head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>Escape 2 page 2</title>
-  <style>
-    html {
-      text-align: center
-    }
-
-    form {
-      /* Uniquement centrer le formulaire sur la page */
-      margin: 0 auto;
-      width: 60vw;
-      /* Encadré pour voir les limites du formulaire */
-      padding: 1em;
-    }
-
-    .spacer {
-      height: 5vh;
-    }
-
-    .large-spacer {
-      height: 40vh;
-    }
-
-    .small-spacer {
-      height: 1vh;
-    }
-
-    form div+div {
-      margin-top: 1em;
-    }
-
-    label {
-      /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
-      display: inline-block;
-      width: 60vw;
-      text-align: justify;
-      color: blue;
-      font-weight: bold;
-      font-size: 8vw;
-    }
-
-    body {
-      background-image: url("imagescape2-2.jpg");
-      background-repeat: no-repeat;
-      background-position: top;
-      background-color: black;
-      background-size: auto 100vh;
-    }
-  </style>
-  <script language="javascript">
-    var num = "0";
-    var code = new Array(num, num, num, num, num, num, num, num);
-    var pos = 0;
-
-    for (var f = 0; f < 8; f++) {
-      code[f] = "v";
-    }
-
-    c1 = new Image();
-    c1.src = "digicode/c1.gif"
-    c2 = new Image();
-    c2.src = "digicode/c2.gif"
-    c3 = new Image();
-    c3.src = "digicode/c3.gif"
-    c4 = new Image();
-    c4.src = "digicode/c4.gif"
-    c5 = new Image();
-    c5.src = "digicode/c5.gif"
-    c6 = new Image();
-    c6.src = "digicode/c6.gif"
-    c7 = new Image();
-    c7.src = "digicode/c7.gif"
-    c8 = new Image();
-    c8.src = "digicode/c8.gif"
-    c9 = new Image();
-    c9.src = "digicode/c9.gif"
-    c0 = new Image();
-    c0.src = "digicode/c0.gif"
-    cv = new Image();
-    cv.src = "digicode/cv.gif"
-
-    function affiche() {
-      document.images.a.src = eval("c" + code[0] + ".src");
-      document.images.b.src = eval("c" + code[1] + ".src");
-      document.images.c.src = eval("c" + code[2] + ".src");
-      document.images.d.src = eval("c" + code[3] + ".src");
-      document.images.e.src = eval("c" + code[4] + ".src");
-      document.images.f.src = eval("c" + code[5] + ".src");
-      document.images.g.src = eval("c" + code[6] + ".src");
-      document.images.h.src = eval("c" + code[7] + ".src");
-    }
-
-    function nouveau(num) {
-      if (pos < 8) {
-        for (var f = 1; f < 8; f++) {
-          code[f - 1] = code[f];
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Escape 2 page 2</title>
+    <style>
+        html {
+            text-align: center
         }
-        code[7] = eval(num);
-        pos += 1;
-      }
-      affiche();
-    }
 
-    function ok() {
-      password = "";
-      for (var f = 0; f < 8; f++) {
-        if (code[f] != "v") {
-          password += code[f]
-        };
-      }
-      if (password == "2059") {
-        this.location.href = "escape2-3.html";
-      } else {
-        cancel();
-      }
-    }
+        form {
+            /* Uniquement centrer le formulaire sur la page */
+            margin: 0 auto;
+            width: 60vw;
+            /* Encadré pour voir les limites du formulaire */
+            padding: 1em;
+        }
 
-    function cancel() {
-      for (var f = 0; f < 8; f++) {
-        code[f] = "v";
-      }
-      pos = 0;
-      affiche();
-    }
-  </script>
+        .spacer {
+            height: 5vh;
+        }
+
+        .large-spacer {
+            height: 40vh;
+        }
+
+        .small-spacer {
+            height: 1vh;
+        }
+
+        form div+div {
+            margin-top: 1em;
+        }
+
+        label {
+            /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+            display: inline-block;
+            width: 60vw;
+            text-align: justify;
+            color: blue;
+            font-weight: bold;
+            font-size: 8vw;
+        }
+
+        body {
+            background-image: url("imagescape2-2.jpg");
+            background-repeat: no-repeat;
+            background-position: top;
+            background-color: black;
+            background-size: auto 100vh;
+        }
+    </style>
+    <script language="javascript">
+        var num = "0";
+        var code = new Array(num, num, num, num, num, num, num, num);
+        var pos = 0;
+
+        for (var f = 0; f < 8; f++) {
+            code[f] = "v";
+        }
+
+        c1 = new Image();
+        c1.src = "digicode/c1.gif"
+        c2 = new Image();
+        c2.src = "digicode/c2.gif"
+        c3 = new Image();
+        c3.src = "digicode/c3.gif"
+        c4 = new Image();
+        c4.src = "digicode/c4.gif"
+        c5 = new Image();
+        c5.src = "digicode/c5.gif"
+        c6 = new Image();
+        c6.src = "digicode/c6.gif"
+        c7 = new Image();
+        c7.src = "digicode/c7.gif"
+        c8 = new Image();
+        c8.src = "digicode/c8.gif"
+        c9 = new Image();
+        c9.src = "digicode/c9.gif"
+        c0 = new Image();
+        c0.src = "digicode/c0.gif"
+        cv = new Image();
+        cv.src = "digicode/cv.gif"
+
+        function affiche() {
+            document.images.a.src = eval("c" + code[0] + ".src");
+            document.images.b.src = eval("c" + code[1] + ".src");
+            document.images.c.src = eval("c" + code[2] + ".src");
+            document.images.d.src = eval("c" + code[3] + ".src");
+            document.images.e.src = eval("c" + code[4] + ".src");
+            document.images.f.src = eval("c" + code[5] + ".src");
+            document.images.g.src = eval("c" + code[6] + ".src");
+            document.images.h.src = eval("c" + code[7] + ".src");
+        }
+
+        function nouveau(num) {
+            if (pos < 8) {
+                for (var f = 1; f < 8; f++) {
+                    code[f - 1] = code[f];
+                }
+                code[7] = eval(num);
+                pos += 1;
+            }
+            affiche();
+        }
+
+        function ok() {
+            password = "";
+            for (var f = 0; f < 8; f++) {
+                if (code[f] != "v") {
+                    password += code[f]
+                };
+            }
+            if (password == "2059") {
+                this.location.href = "escape2-3.html";
+            } else {
+                cancel();
+            }
+        }
+
+        function cancel() {
+            for (var f = 0; f < 8; f++) {
+                code[f] = "v";
+            }
+            pos = 0;
+            affiche();
+        }
+    </script>
 
 </head>
 
 
 <body>
 
-  <div class="spacer">
-  </div>
+    <div class="spacer">
+    </div>
 
-  <label>
-    <p></p> Code de la cellule </label>
+    <label>
+        <p></p> Code de la cellule </label>
 
-  <div class="large-spacer">
-  </div>
+    <div class="large-spacer">
+    </div>
 
-  <table width=80vw height=5vh border="1" align="center">
-    <tr>
-      <td width=60vw height="0" nowrap="nowrap" bgcolor="#999999">
-        <table border=5vh align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolorlight="#F0F0F0" bordercolordark="#000000"
-          bgcolor="#000000">
-          <tr>
-            <td align="center">
-              <center>
-                <img src="digicode/cv.gif" name="a" width="16" height="21" align="bottom" id="a" />
-                <img src="digicode/cv.gif" name="b" width="16" height="21" align="bottom" id="b" />
-                <img src="digicode/cv.gif" name="c" width="16" height="21" align="bottom" id="c" />
-                <img src="digicode/cv.gif" name="d" width="16" height="21" align="bottom" id="d" />
-                <img src="digicode/cv.gif" name="e" width="16" height="21" align="bottom" id="e" />
-                <img src="digicode/cv.gif" name="f" width="16" height="21" align="bottom" id="f" />
-                <img src="digicode/cv.gif" name="g" width="16" height="21" align="bottom" id="g" />
-                <img src="digicode/cv.gif" name="h" width="16" height="21" align="bottom" id="h" />
-              </center>
+    <table width=80vw height=5vh border="1" align="center">
+        <tr>
+            <td width=60vw height="0" nowrap="nowrap" bgcolor="#999999">
+                <table border=5vh align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolorlight="#F0F0F0" bordercolordark="#000000"
+                    bgcolor="#000000">
+                    <tr>
+                        <td align="center">
+                            <center>
+                                <img src="digicode/cv.gif" name="a" width="16" height="21" align="bottom" id="a" />
+                                <img src="digicode/cv.gif" name="b" width="16" height="21" align="bottom" id="b" />
+                                <img src="digicode/cv.gif" name="c" width="16" height="21" align="bottom" id="c" />
+                                <img src="digicode/cv.gif" name="d" width="16" height="21" align="bottom" id="d" />
+                                <img src="digicode/cv.gif" name="e" width="16" height="21" align="bottom" id="e" />
+                                <img src="digicode/cv.gif" name="f" width="16" height="21" align="bottom" id="f" />
+                                <img src="digicode/cv.gif" name="g" width="16" height="21" align="bottom" id="g" />
+                                <img src="digicode/cv.gif" name="h" width="16" height="21" align="bottom" id="h" />
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                <div class="small-spacer"></div>
+                <table width="0" height="0" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolorlight="#F0F0F0"
+                    bordercolordark="#000000" cols="3" bgcolor="#999999">
+                    <tr>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('1')">
+                                    <img src="digicode/b1.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('2')">
+                                    <img src="digicode/b2.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('3')">
+                                    <img src="digicode/b3.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('4')">
+                                    <img src="digicode/b4.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('5')">
+                                    <img src="digicode/b5.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('6')">
+                                    <img src="digicode/b6.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('7')">
+                                    <img src="digicode/b7.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('8')">
+                                    <img src="digicode/b8.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('9')">
+                                    <img src="digicode/b9.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="cancel()">
+                                    <img src="digicode/bca.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="#" onclick="nouveau('0')">
+                                    <img src="digicode/b0.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                        <td align="center" bgcolor="#999999">
+                            <center>
+                                <a href="javascript:ok()">
+                                    <img src="digicode/bok.png" width="46" height="46" border="0" align="bottom" />
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
             </td>
-          </tr>
-        </table>
-        <div class="small-spacer"></div>
-        <table width="0" height="0" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolorlight="#F0F0F0"
-          bordercolordark="#000000" cols="3" bgcolor="#999999">
-          <tr>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('1')">
-                  <img src="digicode/b1.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('2')">
-                  <img src="digicode/b2.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('3')">
-                  <img src="digicode/b3.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('4')">
-                  <img src="digicode/b4.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('5')">
-                  <img src="digicode/b5.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('6')">
-                  <img src="digicode/b6.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('7')">
-                  <img src="digicode/b7.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('8')">
-                  <img src="digicode/b8.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('9')">
-                  <img src="digicode/b9.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="cancel()">
-                  <img src="digicode/bca.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="#" onclick="nouveau('0')">
-                  <img src="digicode/b0.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-            <td align="center" bgcolor="#999999">
-              <center>
-                <a href="javascript:ok()">
-                  <img src="digicode/bok.png" width="46" height="46" border="0" align="bottom" />
-                </a>
-              </center>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+        </tr>
+    </table>
 
 </body>
 
