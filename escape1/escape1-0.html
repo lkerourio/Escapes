@@ -18,7 +18,7 @@
         }
 
         .spacer {
-            height: 20vh;
+            height: 15vh;
         }
 
         form div+div {
@@ -63,6 +63,11 @@ entre les étiquettes et les champs texte */
     <label> Le but du jeu est de résoudre toutes les énigmes. <p></p> Dans l'escape, un même objet peut servir plusieurs fois. <p></p> Les objets ont tous une signification, mais tous ne sont pas nécessaires. <p></p> Il n'y a pas besoin de fouiller en hauteur. <p></p> </label>
 
     <form action="escape1-1.html">
+        
+        <div>
+            <label for="mdp"> Mot de passe : </label>
+            <input id="mdp" name="mdpaccès" required pattern="boussole|BOUSSOLE|boussoles|BOUSSOLES">
+        </div>
 
         <div class="button">
             <button type="submit">J'ai compris les règles</button>
